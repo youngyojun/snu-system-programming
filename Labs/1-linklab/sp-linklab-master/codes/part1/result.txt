@@ -1,0 +1,105 @@
+stu70@sp01:~/Labs/sp-linklab/linklab/part1$ make run test1
+cc -I. -I ../utils -o libmemtrace.so -shared -fPIC memtrace.c ../utils/memlog.c ../utils/memlist.c -ldl
+[0001] Memory tracer started.
+[0002]           malloc( 1024 ) = 0x559fa40a32a0
+[0003]           malloc( 32 ) = 0x559fa40a36b0
+[0004]           malloc( 1 ) = 0x559fa40a36e0
+[0005]           free( 0x559fa40a36e0 )
+[0006]           free( 0x559fa40a36b0 )
+[0007] 
+[0008] Statistics
+[0009]   allocated_total      1057
+[0010]   allocated_avg        352
+[0011]   freed_total          0
+[0012] 
+[0013] Memory tracer stopped.
+stu70@sp01:~/Labs/sp-linklab/linklab/part1$ make run test2
+cc -I. -I ../utils -o libmemtrace.so -shared -fPIC memtrace.c ../utils/memlog.c ../utils/memlist.c -ldl
+[0001] Memory tracer started.
+[0002]           malloc( 1024 ) = 0x55bcca2372a0
+[0003]           free( 0x55bcca2372a0 )
+[0004] 
+[0005] Statistics
+[0006]   allocated_total      1024
+[0007]   allocated_avg        1024
+[0008]   freed_total          0
+[0009] 
+[0010] Memory tracer stopped.
+stu70@sp01:~/Labs/sp-linklab/linklab/part1$ make run test3
+cc -I. -I ../utils -o libmemtrace.so -shared -fPIC memtrace.c ../utils/memlog.c ../utils/memlist.c -ldl
+[0001] Memory tracer started.
+[0002]           malloc( 18317 ) = 0x5601121182a0
+[0003]           calloc( 1 , 47914 ) = 0x56011211ca40
+[0004]           calloc( 1 , 51385 ) = 0x560112128580
+[0005]           malloc( 38071 ) = 0x560112134e50
+[0006]           calloc( 1 , 42510 ) = 0x56011213e310
+[0007]           calloc( 1 , 19424 ) = 0x560112148930
+[0008]           malloc( 26331 ) = 0x56011214d520
+[0009]           calloc( 1 , 4368 ) = 0x560112153c10
+[0010]           calloc( 1 , 48632 ) = 0x560112154d30
+[0011]           calloc( 1 , 45617 ) = 0x560112160b30
+[0012]           free( 0x560112160b30 )
+[0013]           free( 0x560112154d30 )
+[0014]           free( 0x560112153c10 )
+[0015]           free( 0x56011214d520 )
+[0016]           free( 0x560112148930 )
+[0017]           free( 0x56011213e310 )
+[0018]           free( 0x560112134e50 )
+[0019]           free( 0x560112128580 )
+[0020]           free( 0x56011211ca40 )
+[0021]           free( 0x5601121182a0 )
+[0022] 
+[0023] Statistics
+[0024]   allocated_total      342569
+[0025]   allocated_avg        34256
+[0026]   freed_total          0
+[0027] 
+[0028] Memory tracer stopped.
+stu70@sp01:~/Labs/sp-linklab/linklab/part1$ make run test4
+cc -I. -I ../utils -o libmemtrace.so -shared -fPIC memtrace.c ../utils/memlog.c ../utils/memlist.c -ldl
+^[[A[0001] Memory tracer started.
+[0002]           malloc( 1024 ) = 0x5648ab2e82a0
+[0003]           free( 0x5648ab2e82a0 )
+free(): double free detected in tcache 2
+Aborted
+make: *** [Makefile:37: run] Error 134
+stu70@sp01:~/Labs/sp-linklab/linklab/part1$ make run test5
+cc -I. -I ../utils -o libmemtrace.so -shared -fPIC memtrace.c ../utils/memlog.c ../utils/memlist.c -ldl
+[0001] Memory tracer started.
+[0002]           malloc( 10 ) = 0x564ad6d172a0
+[0003]           realloc( 0x564ad6d172a0 , 100 ) = 0x564ad6d172a0
+[0004]           realloc( 0x564ad6d172a0 , 1000 ) = 0x564ad6d172a0
+[0005]           realloc( 0x564ad6d172a0 , 10000 ) = 0x564ad6d172a0
+[0006]           realloc( 0x564ad6d172a0 , 100000 ) = 0x564ad6d172a0
+[0007]           free( 0x564ad6d172a0 )
+[0008] 
+[0009] Statistics
+[0010]   allocated_total      111110
+[0011]   allocated_avg        22222
+[0012]   freed_total          0
+[0013] 
+[0014] Memory tracer stopped.
+stu70@sp01:~/Labs/sp-linklab/linklab/part1$ make run test6
+cc -I. -I ../utils -o libmemtrace.so -shared -fPIC memtrace.c ../utils/memlog.c ../utils/memlist.c -ldl
+^[[A[0001] Memory tracer started.
+[0002]           malloc( 10 ) = 0x557a0fd122a0
+[0003]           realloc( 0x557a0fd122a0 , 100 ) = 0x557a0fd122a0
+[0004]           realloc( 0x557a0fd122a0 , 1000 ) = 0x557a0fd122a0
+[0005]           realloc( 0x557a0fd122a0 , 10000 ) = 0x557a0fd122a0
+[0006]           realloc( 0x557a0fd122a0 , 100000 ) = 0x557a0fd122a0
+[0007]           free( 0x557a0fd122a0 )
+double free or corruption (top)
+Aborted
+make: *** [Makefile:37: run] Error 134
+stu70@sp01:~/Labs/sp-linklab/linklab/part1$ make run test7
+cc -I. -I ../utils -o libmemtrace.so -shared -fPIC memtrace.c ../utils/memlog.c ../utils/memlist.c -ldl
+[0001] Memory tracer started.
+[0002]           malloc( 10 ) = 0x557e772502a0
+[0003]           realloc( 0x557e772502a0 , 100 ) = 0x557e772502a0
+[0004]           realloc( 0x557e772502a0 , 1000 ) = 0x557e772502a0
+[0005]           realloc( 0x557e772502a0 , 10000 ) = 0x557e772502a0
+[0006]           realloc( 0x557e772502a0 , 100000 ) = 0x557e772502a0
+[0007]           free( 0x557e772502a0 )
+double free or corruption (top)
+Aborted
+make: *** [Makefile:37: run] Error 134

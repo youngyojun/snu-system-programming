@@ -1,0 +1,7 @@
+root@youngyojun:/sys/kernel/debug/ptree# echo 1104 >> input 
+root@youngyojun:/sys/kernel/debug/ptree# cat ptree 
+systemd (1)
+systemd (822)
+gnome-session-b (1104)
+root@youngyojun:/sys/kernel/debug/ptree# 
+

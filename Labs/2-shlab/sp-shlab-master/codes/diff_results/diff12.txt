@@ -1,0 +1,30 @@
+1c1
+< ./sdriver.pl -t trace12.txt -s ./tshref -a "-p"
+---
+> ./sdriver.pl -t trace12.txt -s ./tsh -a "-p"
+6c6
+< Job [1] (165246) stopped by signal 20
+---
+> Job [1] (165235) stopped by signal 20
+8c8
+< [1] (165246) Stopped ./mysplit 4 
+---
+> [1] (165235) Stopped ./mysplit 4 
+24,31c24,31
+<  165240 pts/9    S+     0:00 sh -c make rtest12 > outputs/rtest12.txt
+<  165241 pts/9    S+     0:00 make rtest12
+<  165242 pts/9    S+     0:00 /bin/sh -c ./sdriver.pl -t trace12.txt -s ./tshref -a "-p"
+<  165243 pts/9    S+     0:00 /usr/bin/perl ./sdriver.pl -t trace12.txt -s ./tshref -a -p
+<  165244 pts/9    S+     0:00 ./tshref -p
+<  165246 pts/9    T      0:00 ./mysplit 4
+<  165247 pts/9    T      0:00 ./mysplit 4
+<  165250 pts/9    R      0:00 /bin/ps a
+---
+>  165229 pts/9    S+     0:00 sh -c make test12 > outputs/test12.txt
+>  165230 pts/9    S+     0:00 make test12
+>  165231 pts/9    S+     0:00 /bin/sh -c ./sdriver.pl -t trace12.txt -s ./tsh -a "-p"
+>  165232 pts/9    S+     0:00 /usr/bin/perl ./sdriver.pl -t trace12.txt -s ./tsh -a -p
+>  165233 pts/9    S+     0:00 ./tsh -p
+>  165235 pts/9    T      0:00 ./mysplit 4
+>  165236 pts/9    T      0:00 ./mysplit 4
+>  165239 pts/9    R      0:00 /bin/ps a

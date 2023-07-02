@@ -1,0 +1,42 @@
+1c1
+< ./sdriver.pl -t trace15.txt -s ./tshref -a "-p"
+---
+> ./sdriver.pl -t trace15.txt -s ./tsh -a "-p"
+8c8
+< Job [1] (165348) terminated by signal 2
+---
+> Job [1] (165327) terminated by signal 2
+10c10
+< [1] (165350) ./myspin 3 &
+---
+> [1] (165329) ./myspin 3 &
+12c12
+< [2] (165352) ./myspin 4 &
+---
+> [2] (165331) ./myspin 4 &
+14,15c14,15
+< [1] (165350) Running ./myspin 3 &
+< [2] (165352) Running ./myspin 4 &
+---
+> [1] (165329) Running ./myspin 3 &
+> [2] (165331) Running ./myspin 4 &
+17c17
+< Job [1] (165350) stopped by signal 20
+---
+> Job [1] (165329) stopped by signal 20
+19,20c19,20
+< [1] (165350) Stopped ./myspin 3 &
+< [2] (165352) Running ./myspin 4 &
+---
+> [1] (165329) Stopped ./myspin 3 &
+> [2] (165331) Running ./myspin 4 &
+24c24
+< [1] (165350) ./myspin 3 &
+---
+> [1] (165329) ./myspin 3 &
+26,27c26,27
+< [1] (165350) Running ./myspin 3 &
+< [2] (165352) Running ./myspin 4 &
+---
+> [1] (165329) Running ./myspin 3 &
+> [2] (165331) Running ./myspin 4 &

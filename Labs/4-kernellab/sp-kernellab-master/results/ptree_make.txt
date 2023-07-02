@@ -1,0 +1,18 @@
+root@youngyojun:/home/youngyojun/Labs/sp-kernellab/kernellab-handout/ptree# make
+make -C /lib/modules/5.15.0-71-generic/build M=/home/youngyojun/Labs/sp-kernellab/kernellab-handout/ptree modules;
+make[1]: Entering directory '/usr/src/linux-headers-5.15.0-71-generic'
+  CC [M]  /home/youngyojun/Labs/sp-kernellab/kernellab-handout/ptree/dbfs_ptree.o
+  MODPOST /home/youngyojun/Labs/sp-kernellab/kernellab-handout/ptree/Module.symvers
+  CC [M]  /home/youngyojun/Labs/sp-kernellab/kernellab-handout/ptree/dbfs_ptree.mod.o
+  LD [M]  /home/youngyojun/Labs/sp-kernellab/kernellab-handout/ptree/dbfs_ptree.ko
+  BTF [M] /home/youngyojun/Labs/sp-kernellab/kernellab-handout/ptree/dbfs_ptree.ko
+Skipping BTF generation for /home/youngyojun/Labs/sp-kernellab/kernellab-handout/ptree/dbfs_ptree.ko due to unavailability of vmlinux
+make[1]: Leaving directory '/usr/src/linux-headers-5.15.0-71-generic'
+sudo insmod dbfs_ptree.ko
+root@youngyojun:/home/youngyojun/Labs/sp-kernellab/kernellab-handout/ptree# make clean
+make -C /lib/modules/5.15.0-71-generic/build M=/home/youngyojun/Labs/sp-kernellab/kernellab-handout/ptree clean;
+make[1]: Entering directory '/usr/src/linux-headers-5.15.0-71-generic'
+  CLEAN   /home/youngyojun/Labs/sp-kernellab/kernellab-handout/ptree/Module.symvers
+make[1]: Leaving directory '/usr/src/linux-headers-5.15.0-71-generic'
+sudo rmmod dbfs_ptree.ko
+root@youngyojun:/home/youngyojun/Labs/sp-kernellab/kernellab-handout/ptree#

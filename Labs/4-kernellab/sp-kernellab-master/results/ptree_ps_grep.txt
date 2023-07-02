@@ -1,0 +1,7 @@
+root@youngyojun:/home/youngyojun# ps aux | grep gnome-session-b
+youngyo+     955  0.0  0.1 200532 15352 tty2     Sl+  02:52   0:00 /usr/libexec/gnome-session-binary --systemd --systemd --session=ubuntu
+youngyo+    1104  0.0  0.2 496548 17532 ?        Ssl  02:52   0:00 /usr/libexec/gnome-session-binary --systemd-service --session=ubuntu
+root        3655  0.0  0.0  18980  2956 pts/3    S+   03:03   0:00 grep --color=auto gnome-session-b
+root@youngyojun:/home/youngyojun# 
+
+

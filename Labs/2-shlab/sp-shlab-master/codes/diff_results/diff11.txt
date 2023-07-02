@@ -1,0 +1,22 @@
+1c1
+< ./sdriver.pl -t trace11.txt -s ./tshref -a "-p"
+---
+> ./sdriver.pl -t trace11.txt -s ./tsh -a "-p"
+6c6
+< Job [1] (165225) terminated by signal 2
+---
+> Job [1] (165215) terminated by signal 2
+22,27c22,27
+<  165219 pts/9    S+     0:00 sh -c make rtest11 > outputs/rtest11.txt
+<  165220 pts/9    S+     0:00 make rtest11
+<  165221 pts/9    S+     0:00 /bin/sh -c ./sdriver.pl -t trace11.txt -s ./tshref -a "-p"
+<  165222 pts/9    S+     0:00 /usr/bin/perl ./sdriver.pl -t trace11.txt -s ./tshref -a -p
+<  165223 pts/9    S+     0:00 ./tshref -p
+<  165228 pts/9    R      0:00 /bin/ps a
+---
+>  165209 pts/9    S+     0:00 sh -c make test11 > outputs/test11.txt
+>  165210 pts/9    S+     0:00 make test11
+>  165211 pts/9    S+     0:00 /bin/sh -c ./sdriver.pl -t trace11.txt -s ./tsh -a "-p"
+>  165212 pts/9    S+     0:00 /usr/bin/perl ./sdriver.pl -t trace11.txt -s ./tsh -a -p
+>  165213 pts/9    S+     0:00 ./tsh -p
+>  165218 pts/9    R      0:00 /bin/ps a

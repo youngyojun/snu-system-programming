@@ -1,0 +1,18 @@
+1c1
+< ./sdriver.pl -t trace05.txt -s ./tshref -a "-p"
+---
+> ./sdriver.pl -t trace05.txt -s ./tsh -a "-p"
+6c6
+< [1] (165105) ./myspin 2 &
+---
+> [1] (165093) ./myspin 2 &
+8c8
+< [2] (165107) ./myspin 3 &
+---
+> [2] (165095) ./myspin 3 &
+10,11c10,11
+< [1] (165105) Running ./myspin 2 &
+< [2] (165107) Running ./myspin 3 &
+---
+> [1] (165093) Running ./myspin 2 &
+> [2] (165095) Running ./myspin 3 &

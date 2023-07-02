@@ -1,0 +1,16 @@
+./sdriver.pl -t trace09.txt -s ./tshref -a "-p"
+#
+# trace09.txt - Process bg builtin command
+#
+tsh> ./myspin 4 &
+[1] (pid1) ./myspin 4 &
+tsh> ./myspin 5
+Job [2] (pid2) stopped by signal 20
+tsh> jobs
+[1] (pid1) Running ./myspin 4 &
+[2] (pid2) Stopped ./myspin 5 
+tsh> bg %2
+[2] (pid2) ./myspin 5 
+tsh> jobs
+[1] (pid1) Running ./myspin 4 &
+[2] (pid2) Running ./myspin 5 

@@ -1,0 +1,20 @@
+root@youngyojun:/home/youngyojun/Labs/sp-kernellab/kernellab-handout/paddr# make
+make -C /lib/modules/5.15.0-71-generic/build M=/home/youngyojun/Labs/sp-kernellab/kernellab-handout/paddr modules;
+make[1]: Entering directory '/usr/src/linux-headers-5.15.0-71-generic'
+  CC [M]  /home/youngyojun/Labs/sp-kernellab/kernellab-handout/paddr/dbfs_paddr.o
+  MODPOST /home/youngyojun/Labs/sp-kernellab/kernellab-handout/paddr/Module.symvers
+  CC [M]  /home/youngyojun/Labs/sp-kernellab/kernellab-handout/paddr/dbfs_paddr.mod.o
+  LD [M]  /home/youngyojun/Labs/sp-kernellab/kernellab-handout/paddr/dbfs_paddr.ko
+  BTF [M] /home/youngyojun/Labs/sp-kernellab/kernellab-handout/paddr/dbfs_paddr.ko
+Skipping BTF generation for /home/youngyojun/Labs/sp-kernellab/kernellab-handout/paddr/dbfs_paddr.ko due to unavailability of vmlinux
+make[1]: Leaving directory '/usr/src/linux-headers-5.15.0-71-generic'
+gcc -o app app.c;
+sudo insmod dbfs_paddr.ko
+root@youngyojun:/home/youngyojun/Labs/sp-kernellab/kernellab-handout/paddr# make clean
+make -C /lib/modules/5.15.0-71-generic/build M=/home/youngyojun/Labs/sp-kernellab/kernellab-handout/paddr clean;
+make[1]: Entering directory '/usr/src/linux-headers-5.15.0-71-generic'
+  CLEAN   /home/youngyojun/Labs/sp-kernellab/kernellab-handout/paddr/Module.symvers
+make[1]: Leaving directory '/usr/src/linux-headers-5.15.0-71-generic'
+rm app;
+sudo rmmod dbfs_paddr.ko
+root@youngyojun:/home/youngyojun/Labs/sp-kernellab/kernellab-handout/paddr#

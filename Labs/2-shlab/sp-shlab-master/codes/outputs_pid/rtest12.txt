@@ -1,0 +1,32 @@
+./sdriver.pl -t trace12.txt -s ./tshref -a "-p"
+#
+# trace12.txt - Forward SIGTSTP to every process in foreground process group
+#
+tsh> ./mysplit 4
+Job [1] (pid1) stopped by signal 20
+tsh> jobs
+[1] (pid1) Stopped ./mysplit 4 
+tsh> /bin/ps a
+    PID TTY      STAT   TIME COMMAND
+    117 pts/0    Ss+    0:00 /sbin/agetty -o -p -- \u --noclear --keep-baud console 115200,38400,9600 linux
+    118 pts/1    Ss+    0:00 /sbin/agetty -o -p -- \u --noclear --keep-baud tty1 115200,38400,9600 linux
+    119 pts/2    Ss+    0:00 /sbin/agetty -o -p -- \u --noclear --keep-baud tty2 115200,38400,9600 linux
+  10975 pts/4    Ss     0:00 -bash
+  10986 pts/4    S+     0:00 sudo python3 create_user.py
+  12827 pts/5    Ss     0:00 -bash
+  12835 pts/6    Ss     0:00 -bash
+  12852 pts/6    S+     0:00 vim create_user.py
+  13022 pts/5    S+     0:00 ssh stu129@sp01.snucse.org
+  13052 pts/7    Ss+    0:00 -bash
+ 183372 pts/8    Ss+    0:00 -bash
+ 183981 pts/9    Ss+    0:00 -bash
+ 184346 pts/10   Ss     0:00 -bash
+ 184494 pts/10   S+     0:00 python3 gen_output.py
+ 184693 pts/10   S+     0:00 sh -c make rtest12 > outputs/rtest12.txt
+ 184694 pts/10   S+     0:00 make rtest12
+ 184695 pts/10   S+     0:00 /bin/sh -c ./sdriver.pl -t trace12.txt -s ./tshref -a "-p"
+ 184696 pts/10   S+     0:00 /usr/bin/perl ./sdriver.pl -t trace12.txt -s ./tshref -a -p
+ 184697 pts/10   S+     0:00 ./tshref -p
+ pid1 pts/10   T      0:00 ./mysplit 4
+ pid2 pts/10   T      0:00 ./mysplit 4
+ 184703 pts/10   R      0:00 /bin/ps a

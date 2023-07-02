@@ -1,0 +1,16 @@
+1c1
+< ./sdriver.pl -t trace07.txt -s ./tshref -a "-p"
+---
+> ./sdriver.pl -t trace07.txt -s ./tsh -a "-p"
+6c6
+< [1] (165139) ./myspin 4 &
+---
+> [1] (165129) ./myspin 4 &
+8c8
+< Job [2] (165141) terminated by signal 2
+---
+> Job [2] (165131) terminated by signal 2
+10c10
+< [1] (165139) Running ./myspin 4 &
+---
+> [1] (165129) Running ./myspin 4 &

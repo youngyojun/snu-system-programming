@@ -1,0 +1,12 @@
+[   12.313130] 17:52:02.802556 main     Executable: /opt/VBoxGuestAdditions-7.0.8/sbin/VBoxService
+               17:52:02.802557 main     Process ID: 792
+               17:52:02.802557 main     Package type: LINUX_64BITS_GENERIC
+[   12.320088] 17:52:02.809557 main     7.0.8 r156879 started. Verbose level = 0
+[   12.334456] 17:52:02.823950 main     vbglR3GuestCtrlDetectPeekGetCancelSupport: Supported (#1)
+[   25.114486] rfkill: input handler disabled
+[  330.744307] dbfs_ptree module initialize done
+[  381.727678] dbfs_ptree module exit
+[  420.887994] dbfs_ptree module initialize done
+[  428.216013] dbfs_ptree module exit
+[  540.032776] dbfs_paddr module initialize done
+[  541.944662] dbfs_paddr module exit

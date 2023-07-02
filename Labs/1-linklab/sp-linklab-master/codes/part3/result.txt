@@ -1,0 +1,159 @@
+stu70@sp01:~/Labs/sp-linklab/linklab/part3$ make run test1
+cc -I. -I ../utils -o libmemtrace.so -shared -fPIC memtrace.c ../utils/memlog.c ../utils/memlist.c -ldl
+[0001] Memory tracer started.
+[0002]           malloc( 1024 ) = 0x55b01eeca2d0
+[0003]           malloc( 32 ) = 0x55b01eeca710
+[0004]           malloc( 1 ) = 0x55b01eeca770
+[0005]           free( 0x55b01eeca770 )
+[0006]           free( 0x55b01eeca710 )
+[0007] 
+[0008] Statistics
+[0009]   allocated_total      1057
+[0010]   allocated_avg        352
+[0011]   freed_total          33
+[0012] 
+[0013] Non-deallocated memory blocks
+[0014]   block              size       ref cnt
+[0015]   0x55b01eeca2d0     1024       1      
+[0016] 
+[0017] Memory tracer stopped.
+stu70@sp01:~/Labs/sp-linklab/linklab/part3$ make run test2
+cc -I. -I ../utils -o libmemtrace.so -shared -fPIC memtrace.c ../utils/memlog.c ../utils/memlist.c -ldl
+[0001] Memory tracer started.
+[0002]           malloc( 1024 ) = 0x562045e3a2d0
+[0003]           free( 0x562045e3a2d0 )
+[0004] 
+[0005] Statistics
+[0006]   allocated_total      1024
+[0007]   allocated_avg        1024
+[0008]   freed_total          1024
+[0009] 
+[0010] Memory tracer stopped.
+stu70@sp01:~/Labs/sp-linklab/linklab/part3$ make run test3
+cc -I. -I ../utils -o libmemtrace.so -shared -fPIC memtrace.c ../utils/memlog.c ../utils/memlist.c -ldl
+[0001] Memory tracer started.
+[0002]           calloc( 1 , 25440 ) = 0x55b5907082d0
+[0003]           calloc( 1 , 63332 ) = 0x55b59070e670
+[0004]           malloc( 57875 ) = 0x55b59071de10
+[0005]           calloc( 1 , 65059 ) = 0x55b59072c060
+[0006]           malloc( 49668 ) = 0x55b59073bec0
+[0007]           calloc( 1 , 52465 ) = 0x55b590748100
+[0008]           calloc( 1 , 62089 ) = 0x55b590754e30
+[0009]           malloc( 1647 ) = 0x55b590764100
+[0010]           calloc( 1 , 47063 ) = 0x55b5907647b0
+[0011]           calloc( 1 , 1903 ) = 0x55b59076ffc0
+[0012]           free( 0x55b59076ffc0 )
+[0013]           free( 0x55b5907647b0 )
+[0014]           free( 0x55b590764100 )
+[0015]           free( 0x55b590754e30 )
+[0016]           free( 0x55b590748100 )
+[0017]           free( 0x55b59073bec0 )
+[0018]           free( 0x55b59072c060 )
+[0019]           free( 0x55b59071de10 )
+[0020]           free( 0x55b59070e670 )
+[0021]           free( 0x55b5907082d0 )
+[0022] 
+[0023] Statistics
+[0024]   allocated_total      426541
+[0025]   allocated_avg        42654
+[0026]   freed_total          426541
+[0027] 
+[0028] Memory tracer stopped.
+stu70@sp01:~/Labs/sp-linklab/linklab/part3$ make run test4
+cc -I. -I ../utils -o libmemtrace.so -shared -fPIC memtrace.c ../utils/memlog.c ../utils/memlist.c -ldl
+[0001] Memory tracer started.
+[0002]           malloc( 1024 ) = 0x55de1c6822d0
+[0003]           free( 0x55de1c6822d0 )
+[0004]           free( 0x55de1c6822d0 )
+[0005]     *** DOUBLE_FREE  *** (ignoring)
+[0006]           free( 0x1706e90 )
+[0007]     *** ILLEGAL_FREE *** (ignoring)
+[0008] 
+[0009] Statistics
+[0010]   allocated_total      1024
+[0011]   allocated_avg        1024
+[0012]   freed_total          1024
+[0013] 
+[0014] Memory tracer stopped.
+stu70@sp01:~/Labs/sp-linklab/linklab/part3$ make run test5
+cc -I. -I ../utils -o libmemtrace.so -shared -fPIC memtrace.c ../utils/memlog.c ../utils/memlist.c -ldl
+[0001] Memory tracer started.
+[0002]           malloc( 10 ) = 0x5569c06dc2d0
+[0003]           realloc( 0x5569c06dc2d0 , 100 ) = 0x5569c06dc320
+[0004]           realloc( 0x5569c06dc320 , 1000 ) = 0x5569c06dc3c0
+[0005]           realloc( 0x5569c06dc3c0 , 10000 ) = 0x5569c06dc7e0
+[0006]           realloc( 0x5569c06dc7e0 , 100000 ) = 0x5569c06def30
+[0007]           free( 0x5569c06def30 )
+[0008] 
+[0009] Statistics
+[0010]   allocated_total      111110
+[0011]   allocated_avg        22222
+[0012]   freed_total          111110
+[0013] 
+[0014] Memory tracer stopped.
+stu70@sp01:~/Labs/sp-linklab/linklab/part3$ make run test6
+cc -I. -I ../utils -o libmemtrace.so -shared -fPIC memtrace.c ../utils/memlog.c ../utils/memlist.c -ldl
+[0001] Memory tracer started.
+[0002]           malloc( 10 ) = 0x55db600652d0
+[0003]           realloc( 0x55db600652d0 , 100 ) = 0x55db60065320
+[0004]           realloc( 0x55db60065320 , 1000 ) = 0x55db600653c0
+[0005]           realloc( 0x55db600653c0 , 10000 ) = 0x55db600657e0
+[0006]           realloc( 0x55db600657e0 , 100000 ) = 0x55db60067f30
+[0007]           free( 0x55db60067f30 )
+[0008]           free( 0x55db60067f30 )
+[0009]     *** DOUBLE_FREE  *** (ignoring)
+[0010] 
+[0011] Statistics
+[0012]   allocated_total      111110
+[0013]   allocated_avg        22222
+[0014]   freed_total          111110
+[0015] 
+[0016] Memory tracer stopped.
+stu70@sp01:~/Labs/sp-linklab/linklab/part3$ make run test7
+cc -I. -I ../utils -o libmemtrace.so -shared -fPIC memtrace.c ../utils/memlog.c ../utils/memlist.c -ldl
+[0001] Memory tracer started.
+[0002]           malloc( 10 ) = 0x5652318c22d0
+[0003]           realloc( 0x5652318c22d0 , 100 ) = 0x5652318c2320
+[0004]           realloc( 0x5652318c2320 , 1000 ) = 0x5652318c23c0
+[0005]           realloc( 0x5652318c23c0 , 10000 ) = 0x5652318c27e0
+[0006]           realloc( 0x5652318c27e0 , 100000 ) = 0x5652318c4f30
+[0007]           free( 0x5652318c4f30 )
+[0008]           free( 0x5652318c4f30 )
+[0009]     *** DOUBLE_FREE  *** (ignoring)
+[0010]           malloc( 100000 ) = 0x5652318c4f30
+[0011]           free( 0x5652318c4f30 )
+[0012]           free( 0x5652318c4f30 )
+[0013]     *** DOUBLE_FREE  *** (ignoring)
+[0014]           free( 0x5652318c4f34 )
+[0015]     *** ILLEGAL_FREE *** (ignoring)
+[0016] 
+[0017] Statistics
+[0018]   allocated_total      211110
+[0019]   allocated_avg        35185
+[0020]   freed_total          211110
+[0021] 
+[0022] Memory tracer stopped.
+cc -I. -I ../utils -o libmemtrace.so -shared -fPIC memtrace.c ../utils/memlog.c ../utils/memlist.c -ldl
+[0001] Memory tracer started.
+[0002]           malloc( 10 ) = 0x560663a032d0
+[0003]           realloc( 0x560663a032d0 , 100 ) = 0x560663a03320
+[0004]           realloc( 0x560663a03320 , 1000 ) = 0x560663a033c0
+[0005]           realloc( 0x560663a033c0 , 10000 ) = 0x560663a037e0
+[0006]           realloc( 0x560663a037e0 , 100000 ) = 0x560663a05f30
+[0007]           free( 0x560663a05f30 )
+[0008]           free( 0x560663a05f30 )
+[0009]     *** DOUBLE_FREE  *** (ignoring)
+[0010]           malloc( 100000 ) = 0x560663a05f30
+[0011]           free( 0x560663a05f34 )
+[0012]     *** ILLEGAL_FREE *** (ignoring)
+[0013]
+[0014] Statistics
+[0015]   allocated_total      211110
+[0016]   allocated_avg        35185
+[0017]   freed_total          111110
+[0018]
+[0019] Non-deallocated memory blocks
+[0020]   block              size       ref cnt
+[0021]   0x560663a05f30     100000     1
+[0022]
+[0023] Memory tracer stopped.
