@@ -1,0 +1,54 @@
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ gcc -o goodcnt goodcnt.c csapp.c -pthread 
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./goodcnt 1000000
+OK cnt=2000000
+
+real	0m0.259s
+user	0m0.268s
+sys	0m0.230s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./goodcnt 2000000
+OK cnt=4000000
+
+real	0m0.436s
+user	0m0.535s
+sys	0m0.298s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./goodcnt 4000000
+OK cnt=8000000
+
+real	0m0.919s
+user	0m0.989s
+sys	0m0.755s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./goodcnt 8000000
+OK cnt=16000000
+
+real	0m1.857s
+user	0m2.117s
+sys	0m1.467s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./goodcnt 16000000
+OK cnt=32000000
+
+real	0m3.674s
+user	0m3.806s
+sys	0m3.300s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./goodcnt 32000000
+OK cnt=64000000
+
+real	0m7.047s
+user	0m7.748s
+sys	0m5.712s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$
+
+
+
+
+
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ ./goodcnt 16000000
+OK cnt=32000000
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ ./goodcnt 16000000
+OK cnt=32000000
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ ./goodcnt 16000000
+OK cnt=32000000
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ ./goodcnt 16000000
+OK cnt=32000000
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ ./goodcnt 16000000
+OK cnt=32000000
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$

@@ -1,0 +1,219 @@
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ gcc -o multi-badcnt multi-badcnt.c csapp.c -pthread 
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./multi-badcnt 1 1000000
+OK cnt=1000000
+
+real	0m0.003s
+user	0m0.003s
+sys	0m0.000s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./multi-badcnt 1 10000000
+OK cnt=10000000
+
+real	0m0.019s
+user	0m0.014s
+sys	0m0.005s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./multi-badcnt 1 100000000
+OK cnt=100000000
+
+real	0m0.173s
+user	0m0.122s
+sys	0m0.041s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ 
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./multi-badcnt 1 32000000
+OK cnt=32000000
+
+real	0m0.058s
+user	0m0.036s
+sys	0m0.015s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./multi-badcnt 2 16000000
+BOOM! cnt=29739297
+
+real	0m0.054s
+user	0m0.045s
+sys	0m0.008s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./multi-badcnt 2 16000000
+BOOM! cnt=20871337
+
+real	0m0.052s
+user	0m0.032s
+sys	0m0.013s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./multi-badcnt 2 16000000
+BOOM! cnt=22170797
+
+real	0m0.054s
+user	0m0.034s
+sys	0m0.014s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./multi-badcnt 2 16000000
+BOOM! cnt=18499464
+
+real	0m0.056s
+user	0m0.033s
+sys	0m0.017s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./multi-badcnt 2 16000000
+BOOM! cnt=17624758
+
+real	0m0.051s
+user	0m0.041s
+sys	0m0.008s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./multi-badcnt 2 16000000
+BOOM! cnt=26014783
+
+real	0m0.098s
+user	0m0.043s
+sys	0m0.014s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./multi-badcnt 2 16000000
+BOOM! cnt=23160083
+
+real	0m0.094s
+user	0m0.039s
+sys	0m0.008s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./multi-badcnt 2 16000000
+BOOM! cnt=24274082
+
+real	0m0.067s
+user	0m0.039s
+sys	0m0.007s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./multi-badcnt 2 16000000
+OK cnt=32000000
+
+real	0m0.073s
+user	0m0.034s
+sys	0m0.009s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./multi-badcnt 4 8000000
+BOOM! cnt=27684548
+
+real	0m0.066s
+user	0m0.036s
+sys	0m0.009s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./multi-badcnt 4 8000000
+OK cnt=32000000
+
+real	0m0.082s
+user	0m0.044s
+sys	0m0.000s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./multi-badcnt 4 8000000
+BOOM! cnt=11349360
+
+real	0m0.088s
+user	0m0.041s
+sys	0m0.012s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./multi-badcnt 4 8000000
+BOOM! cnt=20004889
+
+real	0m0.069s
+user	0m0.035s
+sys	0m0.012s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./multi-badcnt 4 8000000
+BOOM! cnt=11794027
+
+real	0m0.069s
+user	0m0.038s
+sys	0m0.019s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./multi-badcnt 8 4000000
+BOOM! cnt=28000000
+
+real	0m0.087s
+user	0m0.034s
+sys	0m0.012s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./multi-badcnt 8 4000000
+BOOM! cnt=21519658
+
+real	0m0.100s
+user	0m0.041s
+sys	0m0.010s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./multi-badcnt 8 4000000
+BOOM! cnt=18899818
+
+real	0m0.091s
+user	0m0.041s
+sys	0m0.016s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./multi-badcnt 8 4000000
+BOOM! cnt=22699160
+
+real	0m0.074s
+user	0m0.044s
+sys	0m0.000s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./multi-badcnt 8 4000000
+OK cnt=32000000
+
+real	0m0.058s
+user	0m0.031s
+sys	0m0.015s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./multi-badcnt 16 2000000
+BOOM! cnt=15254412
+
+real	0m0.088s
+user	0m0.043s
+sys	0m0.009s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./multi-badcnt 16 2000000
+OK cnt=32000000
+
+real	0m0.092s
+user	0m0.038s
+sys	0m0.013s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./multi-badcnt 16 2000000
+BOOM! cnt=9963144
+
+real	0m0.070s
+user	0m0.037s
+sys	0m0.009s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./multi-badcnt 16 2000000
+BOOM! cnt=24968305
+
+real	0m0.081s
+user	0m0.039s
+sys	0m0.010s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./multi-badcnt 32 1000000
+BOOM! cnt=31223033
+
+real	0m0.084s
+user	0m0.027s
+sys	0m0.020s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./multi-badcnt 32 1000000
+BOOM! cnt=12785594
+
+real	0m0.078s
+user	0m0.031s
+sys	0m0.015s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./multi-badcnt 32 1000000
+BOOM! cnt=23797939
+
+real	0m0.083s
+user	0m0.046s
+sys	0m0.000s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./multi-badcnt 32 1000000
+BOOM! cnt=26000000
+
+real	0m0.069s
+user	0m0.030s
+sys	0m0.015s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./multi-badcnt 32 1000000
+BOOM! cnt=14755274
+
+real	0m0.106s
+user	0m0.034s
+sys	0m0.017s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./multi-badcnt 32 1000000
+BOOM! cnt=28646456
+
+real	0m0.075s
+user	0m0.052s
+sys	0m0.000s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./multi-badcnt 32 1000000
+BOOM! cnt=27151376
+
+real	0m0.075s
+user	0m0.041s
+sys	0m0.008s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./multi-badcnt 32 1000000
+OK cnt=32000000
+
+real	0m0.080s
+user	0m0.040s
+sys	0m0.007s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./multi-badcnt 32 1000000
+BOOM! cnt=19322258
+
+real	0m0.085s
+user	0m0.034s
+sys	0m0.011s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$

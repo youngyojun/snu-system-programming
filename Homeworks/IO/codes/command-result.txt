@@ -1,0 +1,98 @@
+stu70@sp01:~/hw-io$ make
+gcc -o ffiles1 ffiles1.c csapp.c -lpthread	
+gcc -o ffiles2 ffiles2.c csapp.c -lpthread	
+gcc -o ffiles3 ffiles3.c csapp.c -lpthread	
+gcc -o hello hello.c
+stu70@sp01:~/hw-io$ cat commands.txt 
+./ffiles1 abcde.txt
+
+./ffiles2 abcde.txt
+
+rm result.txt
+./ffiles3 result.txt
+
+strace ./hello
+stu70@sp01:~/hw-io$ ./ffiles^C
+stu70@sp01:~/hw-io$ cat abcde.txt 
+abcde
+stu70@sp01:~/hw-io$ ./ffiles1 abcde.txt 
+c1 = a, c2 = a, c3 = b
+stu70@sp01:~/hw-io$ ./ffiles2 abcde.txt 
+Child: c1 = a, c2 = b
+Parent: c1 = a, c2 = c
+stu70@sp01:~/hw-io$ ./ffiles2 abcde.txt 
+Child: c1 = a, c2 = b
+Parent: c1 = a, c2 = c
+stu70@sp01:~/hw-io$ ./ffiles2 abcde.txt 
+Child: c1 = a, c2 = b
+Parent: c1 = a, c2 = c
+stu70@sp01:~/hw-io$ ./ffiles^Ccde.txt 
+stu70@sp01:~/hw-io$ rm result.txt 
+stu70@sp01:~/hw-io$ ./ffiles3 result.txt
+stu70@sp01:~/hw-io$ cat result.txt 
+pqrswxyznefstu70@sp01:~/hw-io$ 
+stu70@sp01:~/hw-io$ ./ffiles2 abcde.txt 
+Parent: c1 = a, c2 = b
+stu70@sp01:~/hw-io$ Child: c1 = a, c2 = c
+
+stu70@sp01:~/hw-io$ strace ./hello 
+execve("./hello", ["./hello"], 0x7ffc3e13a770 /* 31 vars */) = 0
+brk(NULL)                               = 0x5607e3f3b000
+arch_prctl(0x3001 /* ARCH_??? */, 0x7ffea52cf0c0) = -1 EINVAL (Invalid argument)
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=30080, ...}) = 0
+mmap(NULL, 30080, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f5a21d27000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\300A\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+pread64(3, "\4\0\0\0\20\0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0", 32, 848) = 32
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\30x\346\264ur\f|Q\226\236i\253-'o"..., 68, 880) = 68
+fstat(3, {st_mode=S_IFREG|0755, st_size=2029592, ...}) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f5a21d25000
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+pread64(3, "\4\0\0\0\20\0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0", 32, 848) = 32
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\30x\346\264ur\f|Q\226\236i\253-'o"..., 68, 880) = 68
+mmap(NULL, 2037344, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f5a21b33000
+mmap(0x7f5a21b55000, 1540096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x22000) = 0x7f5a21b55000
+mmap(0x7f5a21ccd000, 319488, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19a000) = 0x7f5a21ccd000
+mmap(0x7f5a21d1b000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1e7000) = 0x7f5a21d1b000
+mmap(0x7f5a21d21000, 13920, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f5a21d21000
+close(3)                                = 0
+arch_prctl(ARCH_SET_FS, 0x7f5a21d26540) = 0
+mprotect(0x7f5a21d1b000, 16384, PROT_READ) = 0
+mprotect(0x5607e239c000, 4096, PROT_READ) = 0
+mprotect(0x7f5a21d5c000, 4096, PROT_READ) = 0
+munmap(0x7f5a21d27000, 30080)           = 0
+fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x8), ...}) = 0
+brk(NULL)                               = 0x5607e3f3b000
+brk(0x5607e3f5c000)                     = 0x5607e3f5c000
+write(1, "hello\n", 6hello
+)                  = 6
+exit_group(0)                           = ?
++++ exited with 0 +++
+stu70@sp01:~/hw-io$ 
+
+
+
+
+
+
+stu70@sp01:~/hw-io$ ./ffiles2 abcde.txt > ffiles2-result.txt
+stu70@sp01:~/hw-io$ cat ffiles2-result.txt
+Parent: c1 = a, c2 = b
+Child: c1 = a, c2 = c
+stu70@sp01:~/hw-io$ ./ffiles1 abcde.txt
+c1 = a, c2 = a, c3 = b
+stu70@sp01:~/hw-io$ cat ffiles2-result.txt
+Parent: c1 = a, c2 = b
+Child: c1 = a, c2 = c
+stu70@sp01:~/hw-io$ ./ffiles2 abcde.txt > ffiles2-result.txt
+^[[A^[[Astu70@sp01:~cat ffiles2-result.txt ^Clt.txt
+stu70@sp01:~/hw-io$ ./ffiles2 abcde.txt > ffiles2-result.txt
+stu70@sp01:~/hw-io$ cat ffiles2-result.txt
+Child: c1 = a, c2 = b
+Parent: c1 = a, c2 = c
+stu70@sp01:~/hw-io$
+

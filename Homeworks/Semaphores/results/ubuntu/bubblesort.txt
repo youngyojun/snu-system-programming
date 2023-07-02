@@ -1,0 +1,37 @@
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ gcc -o bubblesort bubblesort.c
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./bubblesort 1000
+
+real	0m0.007s
+user	0m0.007s
+sys	0m0.000s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./bubblesort 2000
+
+real	0m0.013s
+user	0m0.009s
+sys	0m0.004s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./bubblesort 4000
+
+real	0m0.034s
+user	0m0.034s
+sys	0m0.000s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./bubblesort 8000
+
+real	0m0.111s
+user	0m0.111s
+sys	0m0.000s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./bubblesort 16000
+
+real	0m0.419s
+user	0m0.419s
+sys	0m0.000s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./bubblesort 32000
+
+real	0m1.799s
+user	0m1.798s
+sys	0m0.000s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./bubblesort 64000
+
+real	0m7.238s
+user	0m7.235s
+sys	0m0.001s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$

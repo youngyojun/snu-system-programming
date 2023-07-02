@@ -1,0 +1,153 @@
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ gcc -o multi-badcnt multi-badcnt.c csapp.c -pthread 
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./multi-badcnt 1 1000000
+OK cnt=1000000
+
+real	0m0.008s
+user	0m0.008s
+sys	0m0.000s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./multi-badcnt 1 10000000
+OK cnt=10000000
+
+real	0m0.048s
+user	0m0.044s
+sys	0m0.004s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./multi-badcnt 1 100000000
+OK cnt=100000000
+
+real	0m0.140s
+user	0m0.136s
+sys	0m0.004s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ 
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./multi-badcnt 1 32000000
+OK cnt=32000000
+
+real	0m0.059s
+user	0m0.059s
+sys	0m0.000s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./multi-badcnt 2 16000000
+BOOM! cnt=16148410
+
+real	0m0.103s
+user	0m0.200s
+sys	0m0.004s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./multi-badcnt 2 16000000
+BOOM! cnt=16195649
+
+real	0m0.098s
+user	0m0.186s
+sys	0m0.008s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./multi-badcnt 2 16000000
+BOOM! cnt=18660106
+
+real	0m0.076s
+user	0m0.134s
+sys	0m0.004s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./multi-badcnt 2 16000000
+BOOM! cnt=18953363
+
+real	0m0.083s
+user	0m0.154s
+sys	0m0.000s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./multi-badcnt 2 16000000
+BOOM! cnt=17763630
+
+real	0m0.076s
+user	0m0.140s
+sys	0m0.000s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./multi-badcnt 2 16000000
+BOOM! cnt=15959719
+
+real	0m0.096s
+user	0m0.185s
+sys	0m0.004s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./multi-badcnt 4 8000000
+BOOM! cnt=8355054
+
+real	0m0.122s
+user	0m0.448s
+sys	0m0.000s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./multi-badcnt 4 8000000
+BOOM! cnt=8230190
+
+real	0m0.118s
+user	0m0.436s
+sys	0m0.000s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./multi-badcnt 8 4000000
+BOOM! cnt=4968063
+
+real	0m0.101s
+user	0m0.692s
+sys	0m0.000s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./multi-badcnt 8 4000000
+BOOM! cnt=4570266
+
+real	0m0.106s
+user	0m0.776s
+sys	0m0.004s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./multi-badcnt 8 4000000
+BOOM! cnt=4474272
+
+real	0m0.204s
+user	0m1.508s
+sys	0m0.000s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./multi-badcnt 16 2000000
+BOOM! cnt=3046617
+
+real	0m0.097s
+user	0m0.697s
+sys	0m0.008s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./multi-badcnt 16 2000000
+BOOM! cnt=2714669
+
+real	0m0.105s
+user	0m0.785s
+sys	0m0.004s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./multi-badcnt 16 2000000
+BOOM! cnt=3705450
+
+real	0m0.102s
+user	0m0.764s
+sys	0m0.008s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./multi-badcnt 32 1000000
+BOOM! cnt=2206234
+
+real	0m0.105s
+user	0m0.798s
+sys	0m0.004s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./multi-badcnt 32 1000000
+BOOM! cnt=1699007
+
+real	0m0.104s
+user	0m0.789s
+sys	0m0.004s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./multi-badcnt 32 1000000
+BOOM! cnt=2084619
+
+real	0m0.205s
+user	0m1.572s
+sys	0m0.004s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./multi-badcnt 32 1000000
+BOOM! cnt=2863883
+
+real	0m0.102s
+user	0m0.773s
+sys	0m0.005s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./multi-badcnt 32 1000000
+BOOM! cnt=2072691
+
+real	0m0.098s
+user	0m0.742s
+sys	0m0.005s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./multi-badcnt 32 1000000
+BOOM! cnt=2068088
+
+real	0m0.099s
+user	0m0.737s
+sys	0m0.009s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./multi-badcnt 32 1000000
+BOOM! cnt=2435798
+
+real	0m0.105s
+user	0m0.798s
+sys	0m0.005s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$

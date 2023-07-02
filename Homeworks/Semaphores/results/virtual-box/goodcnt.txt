@@ -1,0 +1,57 @@
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ gcc -o goodcnt goodcnt.c csapp.c -pthread
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./goodcnt 1000000
+OK cnt=2000000
+
+real	0m0.039s
+user	0m0.038s
+sys	0m0.000s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./goodcnt 2000000
+OK cnt=4000000
+
+real	0m0.091s
+user	0m0.053s
+sys	0m0.030s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./goodcnt 4000000
+OK cnt=8000000
+
+real	0m0.196s
+user	0m0.135s
+sys	0m0.045s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./goodcnt 8000000
+OK cnt=16000000
+
+real	0m0.363s
+user	0m0.229s
+sys	0m0.124s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./goodcnt 16000000
+OK cnt=32000000
+
+real	0m0.684s
+user	0m0.463s
+sys	0m0.203s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ time ./goodcnt 32000000
+OK cnt=64000000
+
+real	0m1.325s
+user	0m0.883s
+sys	0m0.409s
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$
+
+
+
+
+
+
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ ./goodcnt 16000000
+OK cnt=32000000
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ ./goodcnt 16000000
+OK cnt=32000000
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ ./goodcnt 16000000
+OK cnt=32000000
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ ./goodcnt 16000000
+OK cnt=32000000
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ ./goodcnt 16000000
+OK cnt=32000000
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$ ./goodcnt 16000000
+OK cnt=32000000
+youngyojun@youngyojun:~/HWs/sp-hw-semaphores$

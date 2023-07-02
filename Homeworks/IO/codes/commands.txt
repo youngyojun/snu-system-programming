@@ -1,0 +1,8 @@
+./ffiles1 abcde.txt
+
+./ffiles2 abcde.txt
+
+rm result.txt
+./ffiles3 result.txt
+
+strace ./hello

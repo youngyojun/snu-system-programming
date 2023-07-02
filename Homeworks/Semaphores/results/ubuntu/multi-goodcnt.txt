@@ -1,0 +1,51 @@
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ gcc -o multi-goodcnt multi-goodcnt.c csapp.c -pthread 
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./multi-goodcnt 1 1000000
+OK cnt=1000000
+
+real	0m0.031s
+user	0m0.027s
+sys	0m0.004s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./multi-goodcnt 1 10000000
+OK cnt=10000000
+
+real	0m0.179s
+user	0m0.179s
+sys	0m0.000s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./multi-goodcnt 1 32000000
+OK cnt=32000000
+
+real	0m0.524s
+user	0m0.524s
+sys	0m0.000s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./multi-goodcnt 2 16000000
+OK cnt=32000000
+
+real	0m3.529s
+user	0m3.952s
+sys	0m2.803s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./multi-goodcnt 4 8000000
+OK cnt=32000000
+
+real	0m5.162s
+user	0m8.802s
+sys	0m9.976s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./multi-goodcnt 8 4000000
+OK cnt=32000000
+
+real	0m4.313s
+user	0m5.248s
+sys	0m27.805s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./multi-goodcnt 16 2000000
+OK cnt=32000000
+
+real	0m3.482s
+user	0m3.287s
+sys	0m24.510s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./multi-goodcnt 32 1000000
+OK cnt=32000000
+
+real	0m5.850s
+user	0m9.332s
+sys	0m37.393s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$

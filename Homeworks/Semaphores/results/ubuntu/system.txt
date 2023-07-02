@@ -1,0 +1,5 @@
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ uname -ar
+Linux youngyojun-ubuntu 5.15.0-72-generic #79~20.04.1-Ubuntu SMP Thu Apr 20 22:12:07 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ grep -c processor /proc/cpuinfo 
+8
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$

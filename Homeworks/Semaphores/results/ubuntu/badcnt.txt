@@ -1,0 +1,98 @@
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ gcc -o badcnt badcnt.c csapp.c -pthread 
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./badcnt 1000000
+BOOM! cnt=1094127
+
+real	0m0.013s
+user	0m0.022s
+sys	0m0.000s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./badcnt 2000000
+BOOM! cnt=2018980
+
+real	0m0.017s
+user	0m0.029s
+sys	0m0.004s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./badcnt 4000000
+BOOM! cnt=4404025
+
+real	0m0.026s
+user	0m0.047s
+sys	0m0.000s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./badcnt 8000000
+BOOM! cnt=9291362
+
+real	0m0.042s
+user	0m0.076s
+sys	0m0.000s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./badcnt 16000000
+BOOM! cnt=19625799
+
+real	0m0.074s
+user	0m0.136s
+sys	0m0.000s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ time ./badcnt 32000000
+BOOM! cnt=33634119
+
+real	0m0.209s
+user	0m0.412s
+sys	0m0.000s
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$
+
+
+
+
+
+
+
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ ./badcnt 16000000
+BOOM! cnt=16101451
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ ./badcnt 16000000
+BOOM! cnt=16174785
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ ./badcnt 16000000
+BOOM! cnt=16749329
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ ./badcnt 16000000
+BOOM! cnt=15980465
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ ./badcnt 16000000
+BOOM! cnt=17676306
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ ./badcnt 16000000
+BOOM! cnt=17910042
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ ./badcnt 16000000
+BOOM! cnt=16181329
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ ./badcnt 16000000
+BOOM! cnt=16497231
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ ./badcnt 16000000
+BOOM! cnt=17761288
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ ./badcnt 16000000
+BOOM! cnt=17432044
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ ./badcnt 16000000
+BOOM! cnt=15929014
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ ./badcnt 16000000
+BOOM! cnt=16030793
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$
+
+
+
+
+
+
+
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ ./badcnt 8000
+BOOM! cnt=15993
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ ./badcnt 8000
+OK cnt=16000
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ ./badcnt 8000
+BOOM! cnt=15327
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ ./badcnt 8000
+OK cnt=16000
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ ./badcnt 8000
+OK cnt=16000
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ ./badcnt 8000
+OK cnt=16000
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ ./badcnt 8000
+BOOM! cnt=15611
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ ./badcnt 8000
+OK cnt=16000
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ ./badcnt 8000
+OK cnt=16000
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$ ./badcnt 8000
+OK cnt=16000
+(base) youngyojun@youngyojun-ubuntu:~/SP/sp-hw-semaphores$
